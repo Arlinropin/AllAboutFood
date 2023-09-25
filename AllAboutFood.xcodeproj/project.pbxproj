@@ -12,7 +12,6 @@
 		898BF0F40D45799E43BA3045 /* Pods_AllAboutFood_AllAboutFoodUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC024E55B3683BC82AF5B88 /* Pods_AllAboutFood_AllAboutFoodUITests.framework */; };
 		BA131C182ABF75B50031DCF3 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA131C172ABF75B50031DCF3 /* UIImageView+Extension.swift */; };
 		BA131C1E2ABF7ECC0031DCF3 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA131C1D2ABF7ECC0031DCF3 /* Loader.swift */; };
-		BA131C212ABF80ED0031DCF3 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = BA131C202ABF80ED0031DCF3 /* Lottie */; };
 		BA131C252ABF87160031DCF3 /* NetworkGoogleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA131C242ABF87160031DCF3 /* NetworkGoogleManager.swift */; };
 		BA131C272ABF8A8F0031DCF3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA131C262ABF8A8F0031DCF3 /* DetailViewController.swift */; };
 		BA131C2A2ABF8B970031DCF3 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA131C282ABF8B970031DCF3 /* ImageCollectionViewCell.swift */; };
@@ -24,7 +23,6 @@
 		BA131C382ABFB5390031DCF3 /* NutrientsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA131C362ABFB5390031DCF3 /* NutrientsTableViewCell.swift */; };
 		BA131C392ABFB5390031DCF3 /* NutrientsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA131C372ABFB5390031DCF3 /* NutrientsTableViewCell.xib */; };
 		BA131C3B2ABFC1A90031DCF3 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA131C3A2ABFC1A90031DCF3 /* InfoViewController.swift */; };
-		BA131C3E2ABFF5CA0031DCF3 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BA131C3D2ABFF5CA0031DCF3 /* Alamofire */; };
 		BA7FF9ED2AC138E200A15F33 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7FF9EB2AC138E200A15F33 /* ProfileViewController.swift */; };
 		BA7FF9EE2AC138E200A15F33 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA7FF9EC2AC138E200A15F33 /* ProfileViewController.xib */; };
 		BA7FF9F22AC1397000A15F33 /* ConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7FF9F02AC1397000A15F33 /* ConfigurationViewController.swift */; };
@@ -62,7 +60,6 @@
 		BA802FBA2ABE6B380087BC6A /* ImageResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA802FB92ABE6B380087BC6A /* ImageResult.swift */; };
 		BA802FBC2ABE6B560087BC6A /* ImageDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA802FBB2ABE6B560087BC6A /* ImageDetails.swift */; };
 		BA802FC02ABE6BAD0087BC6A /* ImageQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA802FBF2ABE6BAD0087BC6A /* ImageQuery.swift */; };
-		BA802FC32ABE6DC00087BC6A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = BA802FC22ABE6DC00087BC6A /* Kingfisher */; };
 		BA802FC72ABE70DB0087BC6A /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA802FC52ABE70DB0087BC6A /* FoodTableViewCell.swift */; };
 		BA802FC82ABE70DB0087BC6A /* FoodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA802FC62ABE70DB0087BC6A /* FoodTableViewCell.xib */; };
 		BAC480982AC0A2D000FC30FB /* HeaderDetailTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC480972AC0A2D000FC30FB /* HeaderDetailTable.swift */; };
@@ -175,9 +172,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA131C3E2ABFF5CA0031DCF3 /* Alamofire in Frameworks */,
-				BA802FC32ABE6DC00087BC6A /* Kingfisher in Frameworks */,
-				BA131C212ABF80ED0031DCF3 /* Lottie in Frameworks */,
 				57B115C2D93C9324DC42BDC4 /* Pods_AllAboutFood.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -492,9 +486,6 @@
 			);
 			name = AllAboutFood;
 			packageProductDependencies = (
-				BA802FC22ABE6DC00087BC6A /* Kingfisher */,
-				BA131C202ABF80ED0031DCF3 /* Lottie */,
-				BA131C3D2ABFF5CA0031DCF3 /* Alamofire */,
 			);
 			productName = AllAboutFood;
 			productReference = BA802F5B2ABE53CD0087BC6A /* AllAboutFood.app */;
@@ -572,9 +563,6 @@
 			);
 			mainGroup = BA802F522ABE53CD0087BC6A;
 			packageReferences = (
-				BA802FC12ABE6DC00087BC6A /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				BA131C1F2ABF80ED0031DCF3 /* XCRemoteSwiftPackageReference "lottie-ios" */,
-				BA131C3C2ABFF5CA0031DCF3 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = BA802F5C2ABE53CD0087BC6A /* Products */;
 			projectDirPath = "";
@@ -1126,51 +1114,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		BA131C1F2ABF80ED0031DCF3 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/airbnb/lottie-ios";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.0;
-			};
-		};
-		BA131C3C2ABFF5CA0031DCF3 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
-		BA802FC12ABE6DC00087BC6A /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 7.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		BA131C202ABF80ED0031DCF3 /* Lottie */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BA131C1F2ABF80ED0031DCF3 /* XCRemoteSwiftPackageReference "lottie-ios" */;
-			productName = Lottie;
-		};
-		BA131C3D2ABFF5CA0031DCF3 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BA131C3C2ABFF5CA0031DCF3 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-		BA802FC22ABE6DC00087BC6A /* Kingfisher */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BA802FC12ABE6DC00087BC6A /* XCRemoteSwiftPackageReference "Kingfisher" */;
-			productName = Kingfisher;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BA802F532ABE53CD0087BC6A /* Project object */;
 }
