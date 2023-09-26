@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController" customModule="AllAboutFood" customModuleProvider="target">
+            <connections>
+                <outlet property="confirmPasswordTextField" destination="2jq-kn-BfK" id="pDJ-ZF-kqs"/>
+                <outlet property="emailTextField" destination="vz6-gE-hdh" id="u2j-lB-w7R"/>
+                <outlet property="nameTextField" destination="UCP-Kf-QRK" id="Ozf-oe-8Z2"/>
+                <outlet property="newPasswordTextField" destination="jga-Dq-i15" id="DjE-sk-p8Z"/>
+                <outlet property="signinButton" destination="rR6-jl-Guh" id="Slg-Bf-oRe"/>
+                <outlet property="surnameTextField" destination="aSQ-ID-7JC" id="ea5-hB-rBA"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewWithGradient" destination="Jo3-G9-ZMk" id="mDH-Y0-6hn"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.25" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="U79-PI-vIa">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <color key="tintColor" systemColor="systemGroupedBackgroundColor"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jo3-G9-ZMk">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eg0-63-uen">
+                            <rect key="frame" x="20" y="45" width="353" height="297.33333333333331"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¡Join us!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="peV-aU-oet">
+                                    <rect key="frame" x="0.0" y="0.0" width="353" height="43"/>
+                                    <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="35"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="x2N-O9-VA7">
+                                    <rect key="frame" x="0.0" y="63.000000000000014" width="353" height="234.33333333333337"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ujp-G4-7Wk">
+                                            <rect key="frame" x="0.0" y="0.0" width="353" height="190"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UCP-Kf-QRK">
+                                                    <rect key="frame" x="0.0" y="0.0" width="353" height="34"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="namePhonePad" textContentType="name"/>
+                                                </textField>
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="surname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aSQ-ID-7JC">
+                                                    <rect key="frame" x="0.0" y="39" width="353" height="34"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="namePhonePad" textContentType="family-name"/>
+                                                </textField>
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vz6-gE-hdh">
+                                                    <rect key="frame" x="0.0" y="78" width="353" height="34"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="username"/>
+                                                </textField>
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="new password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jga-Dq-i15">
+                                                    <rect key="frame" x="0.0" y="117" width="353" height="34"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                                </textField>
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2jq-kn-BfK">
+                                                    <rect key="frame" x="0.0" y="156" width="353" height="34"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                                </textField>
+                                            </subviews>
+                                        </stackView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rR6-jl-Guh">
+                                            <rect key="frame" x="0.0" y="200" width="353" height="34.333333333333343"/>
+                                            <color key="tintColor" systemColor="labelColor"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="filled" title="Sign in"/>
+                                            <connections>
+                                                <action selector="goToLogin:" destination="-1" eventType="touchUpInside" id="EpU-Ti-rFB"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="tintColor" systemColor="systemGroupedBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="eg0-63-uen" firstAttribute="top" secondItem="Jo3-G9-ZMk" secondAttribute="top" constant="45" id="4PW-yN-ksF"/>
+                        <constraint firstItem="eg0-63-uen" firstAttribute="leading" secondItem="Jo3-G9-ZMk" secondAttribute="leading" constant="20" id="XWX-zZ-3GL"/>
+                        <constraint firstItem="eg0-63-uen" firstAttribute="centerX" secondItem="Jo3-G9-ZMk" secondAttribute="centerX" id="hx5-zf-cBb"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="U79-PI-vIa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="As8-8E-R4M"/>
+                <constraint firstItem="U79-PI-vIa" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="EmH-WL-4ja"/>
+                <constraint firstItem="Jo3-G9-ZMk" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="SNL-fB-NU6"/>
+                <constraint firstAttribute="trailing" secondItem="Jo3-G9-ZMk" secondAttribute="trailing" id="WHu-FE-2UB"/>
+                <constraint firstItem="U79-PI-vIa" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="hbk-QJ-BlR"/>
+                <constraint firstAttribute="bottom" secondItem="U79-PI-vIa" secondAttribute="bottom" id="iSp-nl-8Od"/>
+                <constraint firstAttribute="bottom" secondItem="Jo3-G9-ZMk" secondAttribute="bottom" id="pGU-PN-vXT"/>
+                <constraint firstItem="Jo3-G9-ZMk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="wwp-fm-l0h"/>
+            </constraints>
+            <point key="canvasLocation" x="24" y="-11"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="background" width="388" height="649"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

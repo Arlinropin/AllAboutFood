@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InitialViewController" customModule="AllAboutFood" customModuleProvider="target">
+            <connections>
+                <outlet property="loginButton" destination="FXr-L2-EOV" id="zYH-Ir-lWU"/>
+                <outlet property="signinButton" destination="V2f-NB-1bq" id="BKO-iL-3v0"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="IWb-Xg-GIo">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SJC-E4-gKF">
+                    <rect key="frame" x="0.0" y="69" width="393" height="77.333333333333314"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="I8i-gw-iAb">
+                            <rect key="frame" x="20" y="10.000000000000004" width="353" height="57.333333333333343"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All about food" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zrR-px-u7V">
+                                    <rect key="frame" x="0.0" y="0.0" width="353" height="43"/>
+                                    <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="35"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The largest community that knows how to take care of itself" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obM-NC-g7j">
+                                    <rect key="frame" x="0.0" y="43" width="353" height="14.333333333333336"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="I8i-gw-iAb" firstAttribute="top" secondItem="SJC-E4-gKF" secondAttribute="top" constant="10" id="9xm-Dj-UJy"/>
+                        <constraint firstItem="I8i-gw-iAb" firstAttribute="centerY" secondItem="SJC-E4-gKF" secondAttribute="centerY" id="S67-Mk-dOi"/>
+                        <constraint firstItem="I8i-gw-iAb" firstAttribute="centerX" secondItem="SJC-E4-gKF" secondAttribute="centerX" id="fYZ-hD-GLc"/>
+                        <constraint firstItem="I8i-gw-iAb" firstAttribute="leading" secondItem="SJC-E4-gKF" secondAttribute="leading" constant="20" id="rQ2-TM-yEQ"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9eI-bu-1V0">
+                    <rect key="frame" x="20" y="734.66666666666663" width="353" height="33.333333333333371"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FXr-L2-EOV">
+                            <rect key="frame" x="0.0" y="0.0" width="174" height="33.333333333333336"/>
+                            <color key="backgroundColor" systemColor="labelColor"/>
+                            <color key="tintColor" systemColor="systemGroupedBackgroundColor"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Log in">
+                                <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="16"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="goToLogin:" destination="-1" eventType="touchUpInside" id="qrE-ab-1oE"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2f-NB-1bq">
+                            <rect key="frame" x="179" y="0.0" width="174" height="33.333333333333336"/>
+                            <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Sign in">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="goToRegister:" destination="-1" eventType="touchUpInside" id="HyM-0v-z4b"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="SJC-E4-gKF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="BcV-Ru-OmH"/>
+                <constraint firstItem="9eI-bu-1V0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Egq-PP-ZGS"/>
+                <constraint firstItem="IWb-Xg-GIo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="OR6-us-0Ul"/>
+                <constraint firstItem="IWb-Xg-GIo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Q8h-sd-H9f"/>
+                <constraint firstItem="SJC-E4-gKF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="R3i-s8-2Ln"/>
+                <constraint firstItem="SJC-E4-gKF" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="VDZ-r9-Y3v"/>
+                <constraint firstItem="9eI-bu-1V0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="YTa-3i-Uvd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="9eI-bu-1V0" secondAttribute="bottom" constant="50" id="egy-2D-4i7"/>
+                <constraint firstAttribute="bottom" secondItem="IWb-Xg-GIo" secondAttribute="bottom" id="rTl-Tr-Xc3"/>
+                <constraint firstItem="IWb-Xg-GIo" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="xQP-Sy-9aF"/>
+            </constraints>
+            <point key="canvasLocation" x="130.53435114503816" y="-11.267605633802818"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="background" width="388" height="649"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

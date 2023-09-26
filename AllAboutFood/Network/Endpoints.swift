@@ -1,12 +1,12 @@
 //
-//  ConstantsURLs.swift
+//  Endpoints.swift
 //  AllAboutFood
 //
 //  Created by Apiux on 22-09-23.
 //
 
 import Foundation
-enum ConstantsURLs {
+enum Endpoints {
     
     enum GoogleCustomSearchApi {
         static let key = "AIzaSyDdcxrb46pGupqf0aJnNsXpm8ppJT1kfPw"
@@ -23,6 +23,16 @@ enum ConstantsURLs {
         }
         static func search(this text: String, with quantity: Int, and page: Int) -> String {
             "\(urlBase)/v1/foods/list?api_key=\(key)&query=\(text)&pageSize=\(quantity)&pageNumber=\(page)"
+        }
+    }
+    
+    enum PlatziApi {
+        static let urlBase = "https://platzi-tweets-backend.herokuapp.com/api/v1"
+        static let auth = urlBase + "/auth"
+        static let register = urlBase + "/register"
+        static let posts = urlBase + "/posts"
+        static func deletePost(id: String) -> String {
+            "\(posts)/\(id)"
         }
     }
 }

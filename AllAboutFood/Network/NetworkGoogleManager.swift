@@ -30,7 +30,7 @@ final class NetworkGoogleManager {
 
     private func getURL(this quantity: Int, from search: String?, _ completion: @escaping (ImageQuery?) -> Void) {
         let encodedString = search?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "invalid%2C%20image%2C%20icon"
-        let urlString = ConstantsURLs.GoogleCustomSearchApi.apiImagesGoogle(with: encodedString, and: quantity)
+        let urlString = Endpoints.GoogleCustomSearchApi.apiImagesGoogle(with: encodedString, and: quantity)
         network.fetchWithAlamofire(with: urlString, method: .get) { (response: ImageQuery?) in
             completion(response)
         }

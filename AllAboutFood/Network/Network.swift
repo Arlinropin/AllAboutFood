@@ -20,6 +20,18 @@ enum NetworkError: Error {
     case connection
 }
 
+public enum CaseResult<T, E> {
+    case success(data: T)
+    case error(error: ErrorType<E>)
+    case unauthorized(error: Error)
+}
+
+public enum ErrorType<E>: Error {
+    case connection
+    case api(_ apiError: E)
+    case general(_ error: Error? = nil)
+}
+
 final class Network {
     
     let consultaQueue = DispatchQueue.global(qos: .background)

@@ -14,13 +14,13 @@ final class NetworkFoodApiManager {
     }
 
     func getList(page number: Int, _ completion: @escaping ([Food]) -> Void) {
-        let url = ConstantsURLs.FoodApi.list(with: numberOfFood, and: number)
+        let url = Endpoints.FoodApi.list(with: numberOfFood, and: number)
         network.fetchWithSession(with: url) { (response: [Food]?) in
             completion( response ?? [] )
         }
     }
     func search(this text: String, page number: Int, _ completion: @escaping ([Food]) -> Void) {
-        let url = ConstantsURLs.FoodApi.search(this: text, with: numberOfFood, and: number)
+        let url = Endpoints.FoodApi.search(this: text, with: numberOfFood, and: number)
         network.fetchWithSession(with: url) { (response: [Food]?) in
             completion( response ?? [] )
         }
