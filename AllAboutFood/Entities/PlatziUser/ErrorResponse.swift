@@ -6,5 +6,5 @@
 //
 
 struct ErrorResponse: Codable {
-    let error: String
+    let error: String?
 }

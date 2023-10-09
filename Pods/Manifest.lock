@@ -119,7 +119,7 @@ DEPENDENCIES:
   - Kingfisher
   - lottie-ios
   - NotificationBannerSwift (~> 3.0.0)
-  - Simple-Networking (~> 0.3.2)
+  - Simple-Networking (~> 0.3.6)
   - SVProgressHUD
 
 SPEC REPOS:
@@ -177,6 +177,6 @@ SPEC CHECKSUMS:
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: c91330fe395cacdfaf16f5246c7fe98679af3ff2
+PODFILE CHECKSUM: 017777b63289919dff9a13b649deb8d69c8ca064
 
 COCOAPODS: 1.12.1

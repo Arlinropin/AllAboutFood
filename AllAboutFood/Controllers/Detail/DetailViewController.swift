@@ -45,7 +45,7 @@ class DetailViewController: UIViewController {
     private func getImages() {
         loader.play(on: self)
         guard let network = network else { return }
-        let networkManager = NetworkGoogleManager(network: network)
+        let networkManager = NetworkGoogleApiManager(network: network)
         networkManager.getImageURL(this: numberOfImages, from: food?.description) { [self] urls in
             imageURLs = urls
             loader.stop()

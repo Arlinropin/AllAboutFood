@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="AllAboutFood" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="zjK-SP-3xR" id="J23-sO-6wP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,25 +19,23 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="QJw-ci-YCa">
-                    <rect key="frame" x="0.0" y="59" width="393" height="400"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="400" id="34N-Fr-rBV"/>
-                    </constraints>
-                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="zjK-SP-3xR">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="QJw-ci-YCa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="MGW-dL-iOk"/>
-                <constraint firstItem="QJw-ci-YCa" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="vHS-Oq-CFl"/>
-                <constraint firstItem="QJw-ci-YCa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="wag-uH-s6M"/>
+                <constraint firstItem="zjK-SP-3xR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="3BU-iy-9ZR"/>
+                <constraint firstItem="zjK-SP-3xR" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9gD-mO-Mn6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="zjK-SP-3xR" secondAttribute="bottom" id="VpM-zx-BaB"/>
+                <constraint firstItem="zjK-SP-3xR" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ktz-gw-x2m"/>
             </constraints>
             <point key="canvasLocation" x="132" y="-11"/>
         </view>
     </objects>
     <resources>
-        <image name="icon" width="231" height="231"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -23,11 +23,9 @@ enum NetworkError: Error {
 public enum CaseResult<T, E> {
     case success(data: T)
     case error(error: ErrorType<E>)
-    case unauthorized(error: Error)
 }
 
 public enum ErrorType<E>: Error {
-    case connection
     case api(_ apiError: E)
     case general(_ error: Error? = nil)
 }
@@ -45,8 +43,6 @@ final class Network {
             }
             let session = URLSession(configuration: .default)
             let task = session.dataTask(with: url) { data, _, error in
-                let dataString = String(data: data ?? Data(), encoding: .utf8) ?? "Sin data"
-                print("[Data]: \(dataString)")
                 guard let safeData = data, error == nil,
                       let json: T = self.parseJSON(this: safeData) else {
                     completion( nil )
@@ -70,17 +66,25 @@ final class Network {
 }
 
 extension Network {
-    func fetchWithAlamofire<T: Decodable>(with urlString: String,
+    func fetchWithAlamofire<P: Encodable,R: Decodable, T: Decodable>(with urlString: String,
                                           method: HTTPMethod = .get,
-                                          parameters: Parameters = [:],
-                                          completion: @escaping (T?) -> Void) {
+                                          parameters: P?,
+                                          completion: @escaping (CaseResult<R,T>) -> Void) {
         guard let url = URL(string: urlString) else { return }
-        AF.request(url, method: method, parameters: parameters).responseData { (response: AFDataResponse<Data>) in
+        
+        AF.request(url, method: method).responseData { (response: AFDataResponse<Data>) in
+            print(response.response)
             guard let safeData = response.data, response.error == nil,
-                  let json: T = self.parseJSON(this: safeData) else {
+                  let json: R = self.parseJSON(this: safeData) else {
+                guard let safeData = response.data, response.error == nil,
+                let jsonError: T = self.parseJSON(this: safeData) else {
+                    completion(.error(error: .general(response.error)))
+                    return
+                }
+                completion(.error(error: .api(jsonError)))
                 return
             }
-            completion(json)
+            completion(.success(data: json))
         }
     }
 }

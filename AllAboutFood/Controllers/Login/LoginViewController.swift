@@ -8,7 +8,7 @@
 import UIKit
 import NotificationBannerSwift
 
-class LoginViewController: UIViewController {
+class LoginViewController: BaseViewController {
 
     // MARK: - Oulets
     @IBOutlet weak var viewWithGradient: UIView!
@@ -56,7 +56,37 @@ class LoginViewController: UIViewController {
                 style: .warning).show()
             return
         }
-        NavigationManager.changeRootViewController(to: TabBarHomeController())
+        let parameter = LoginRequest(email: email, password: password)
+        auth(with: parameter)
+    }
+
+    private func auth(with parameter: LoginRequest) {
+        loader.play(on: self)
+        manager?.auth(with: parameter, completion: { response in
+            self.loader.stop()
+            switch response {
+            case .success(data: let data):
+                NotificationBanner(
+                    title: "¡Welcome!",
+                    subtitle: "Nice to see you again \(data.user?.names ?? "user")",
+                    style: .success).show()
+                NavigationManager.changeRootViewController(to: TabBarHomeController())
+            case .error(error: let error):
+                switch error {
+                case .api(let error):
+                    NotificationBanner(
+                        title: "I'm sorry",
+                        subtitle: "\(error).",
+                        style: .danger).show()
+                case .general(_):
+                    NotificationBanner(
+                        title: "I'm sorry",
+                        subtitle: "Something is broken. Try again later!",
+                        style: .danger).show()
+                    NavigationManager.changeRootViewController(to: TabBarHomeController())
+                }
+            }
+        })
     }
 
     // MARK: - IBActions

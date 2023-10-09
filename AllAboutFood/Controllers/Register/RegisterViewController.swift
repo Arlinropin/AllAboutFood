@@ -8,7 +8,7 @@
 import UIKit
 import NotificationBannerSwift
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: BaseViewController {
 
     // MARK: - Oulets
     @IBOutlet weak var viewWithGradient: UIView!
@@ -82,14 +82,43 @@ class RegisterViewController: UIViewController {
                 style: .warning).show()
             return
         }
-        guard let confirmPassword = confirmPasswordTextField.text, !confirmPassword.isEmpty, confirmPassword != password else {
+        guard let confirmPassword = confirmPasswordTextField.text, !confirmPassword.isEmpty, confirmPassword == password else {
             NotificationBanner(
                 title: "I'm sorry",
                 subtitle: "Passwords in writing are not the same.",
                 style: .warning).show()
             return
         }
-        NavigationManager.changeRootViewController(to: TabBarHomeController())
+        let parameter = RegisterRequest(email: email, password: password, names: "\(name) \(surname)")
+        register(with: parameter)
+    }
+
+    private func register(with parameter: RegisterRequest) {
+        loader.play(on: self)
+        manager?.register(with: parameter, completion: { response in
+            self.loader.stop()
+            switch response {
+            case .success(data: let data):
+                NotificationBanner(
+                    title: "¡Welcome!",
+                    subtitle: "Enjoy this app,\(data.user?.names ?? "user")",
+                    style: .success).show()
+                NavigationManager.changeRootViewController(to: TabBarHomeController())
+            case .error(error: let error):
+                switch error {
+                case .api(let error):
+                    NotificationBanner(
+                        title: "I'm sorry",
+                        subtitle: "\(error).",
+                        style: .danger).show()
+                case .general(_):
+                    NotificationBanner(
+                        title: "I'm sorry",
+                        subtitle: "Something is broken. Try again later!",
+                        style: .danger).show()
+                }
+            }
+        })
     }
 
     // MARK: - IBAction
